@@ -23,3 +23,10 @@ Get value from Bootstrap dropdown menu
 $('#dropdown li').on('click', function(){
     alert($(this).text());
 });
+
+$.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202306180&format=json&callback=?', function(json) {
+  var w_code = weather_con[json.query.results.channel.item.condition.code.toString()];
+  var w_temp = Math.round((json.query.results.channel.item.condition.temp - 32)*5/9) + "℃";
+  console.log(w_code);
+  console.log(w_temp);
+});
