@@ -27,6 +27,7 @@ $('#dropdown li').on('click', function(){
 $.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202306180&format=json&callback=?').done(function(json) {
   var w_code = weather_con[json.query.results.channel.item.condition.code.toString()];
   var w_temp = Math.round((json.query.results.channel.item.condition.temp - 32)*5/9) + "℃";
+  console.log(json);
   console.log(w_code);
   console.log(w_temp);
 });
