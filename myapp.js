@@ -30,4 +30,4 @@ $.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.f
   console.log(w_code);
   console.log(w_temp);
 });
-$('#test').text(w_code);
+$('#test').text("w_code");
