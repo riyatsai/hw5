@@ -37,8 +37,6 @@ $('#dropdown li').on('click', function(){
 
 			   console.log(weatherInfo);
 	           $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(2));
-			   //console.log(cityMatch);
-			   //console.log(nocity);
 	         }
 	       });
 });
