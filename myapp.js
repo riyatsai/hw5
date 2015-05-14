@@ -23,7 +23,7 @@ Get value from Bootstrap dropdown menu
    
 $('#dropdown li').on('click', function(){
     //alert($(this).text());
-	$('.dropdown-toggle').html($(this).text()+'<span class="caret"></span>');
+	$('.dropdown-toggle').html($(this).text()+'  <span class="caret"></span>');
 	var city=$(this).text();
 	       $.ajax('https://query.yahooapis.com/v1/public/yql', {
 	         method: 'GET',
