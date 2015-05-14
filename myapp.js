@@ -35,7 +35,7 @@ $('#dropdown li').on('click', function(){
 	             var cityMatch = 'It seems ' + weatherInfo.item.condition.text.toLowerCase()+' in '+ weatherInfo.location.city + ', ' + weatherInfo.location.country
 
 			   console.log(weatherInfo);
-	           $('.temperature').text(weatherInfo.astronomy.sunrise);
+	           $('.temperature').text((weatherInfo.item.condition.temp-32)*5/9);
 			   //console.log(cityMatch);
 			   //console.log(nocity);
 	         }
