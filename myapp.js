@@ -20,6 +20,36 @@ var skycons = new Skycons();
 /*
 Get value from Bootstrap dropdown menu
 */
+
+  $(document).ready(function () {
+      $.ajax('https://query.yahooapis.com/v1/public/yql', {
+        method: 'GET',
+        data: {
+          q: 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="Taipei")',
+          format: 'json'
+        },
+        success: function (data) {
+		 var weatherInfo = data.query.results.channel;
+            // var cityMatch = 'It seems ' + weatherInfo.item.condition.text.toLowerCase()+' in '+ weatherInfo.location.city + ', ' + weatherInfo.location.country
+		 console.log(weatherInfo);
+            $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(1));
+            $('.condition').text(weatherInfo.item.forecast[0].date);
+		 $('.date1').text(weatherInfo.item.forecast[1].date);
+		 $('.date2').text(weatherInfo.item.forecast[2].date);
+		 $('.date3').text(weatherInfo.item.forecast[3].date);
+		 $('.date1tem').text(((weatherInfo.item.forecast[1].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
+		 $('.date2tem').text(((weatherInfo.item.forecast[2].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
+		 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
+		 
+		 
+        }
+      }
+
+  });
+
+
+
+
    
 $('#dropdown li').on('click', function(){
     //alert($(this).text());
