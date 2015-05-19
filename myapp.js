@@ -6,7 +6,7 @@ var skycons = new Skycons();
   // on Android, a nasty hack is needed: {"resizeClear": true}
 
   // you can add a canvas by it's ID...
-  skycons.add("icon0", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.add("icon0", Skycons.RAIN);
   skycons.add("icon1", Skycons.CLEAR_DAY);
   skycons.add("icon2", Skycons.CLOUDY);
   skycons.add("icon3", Skycons.RAIN);
@@ -73,7 +73,7 @@ $('#dropdown li').on('click', function(){
 				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 for (i = 0; i < 4; i++){ 
 				  if(weatherInfo.item.forecast[i].text==="Partly Cloudy"){
-				 	  skycons.add("icon"+i,Skycons.PARTLY_CLOUDY_DAY);
+				 	  skycons.set("icon"+i,Skycons.PARTLY_CLOUDY_DAY);
 				
 				  };
 			     }
