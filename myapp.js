@@ -74,17 +74,16 @@ $('#dropdown li').on('click', function(){
 				 for (i = 0; i < 4; i++){ 
 				  if(weatherInfo.item.forecast[i].text==="Heavy Rain"||weatherInfo.item.forecast[i].text==="Rain"){
 				 	  skycons.set("icon"+i,Skycons.SLEET);
-				  }	else if(weatherInfo.item.forecast[i].text==="PM Thunderstorms"||weatherInfo.item.forecast[i].text==="Heavy Thunderstorms"||weatherInfo.item.forecast[i].text==="Thunderstorms"||weatherInfo.item.forecast[i].text==="Thundershowers/Wind"||weatherInfo.item.forecast[i].text==="Showers"){
+				  }else if(weatherInfo.item.forecast[i].text==="PM Thunderstorms"||weatherInfo.item.forecast[i].text==="Heavy Thunderstorms"||weatherInfo.item.forecast[i].text==="Thunderstorms"||weatherInfo.item.forecast[i].text==="Thundershowers/Wind"||weatherInfo.item.forecast[i].text==="Showers"||weatherInfo.item.forecast[i].text==="AM Showers"){
 				 	  skycons.set("icon"+i,Skycons.RAIN);
 				  }else if(weatherInfo.item.forecast[i].text==="Clear"||weatherInfo.item.forecast[i].text==="Sunny"){
 				 	  skycons.set("icon"+i,Skycons.CLEAR_DAY);
+				  }if(weatherInfo.item.forecast[i].text==="Partly Cloudy"||weatherInfo.item.forecast[i].text==="AM Clouds/PM Sun"){
+				 	  skycons.set("icon"+i,Skycons.CLOUDY);
 				  }
 			     }
 				 skycons.play();
 	         }
 	       });
 });
-
-
-//"PM Thunderstorms" "Heavy Thunderstorms""Thundershowers/Wind""Showers"
 
