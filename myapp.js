@@ -15,7 +15,7 @@ var skycons = new Skycons();
   skycons.play();
   
   // want to change the icon? no problem:
-  skycons.set("today", Skycons.PARTLY_CLOUDY_NIGHT);
+  // skycons.set("today", Skycons.PARTLY_CLOUDY_NIGHT);
   
 /*
 Get value from Bootstrap dropdown menu
@@ -73,9 +73,9 @@ $('#dropdown li').on('click', function(){
 				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 for (i = 0; i < 4; i++){ 
 				  if(weatherInfo.item.forecast[i].text==="Partly Cloudy"){
-				 	  skycons.set("icon"+i,Skycons.PARTLY_CLOUDY_DAY);
+				 	  skycons.set("icon"+i,Skycons.PARTLY_CLOUDY_NIGHT);
 				
-				  };
+				  }
 			     }
 				 skycons.play();
 	         }
