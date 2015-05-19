@@ -71,8 +71,13 @@ $('#dropdown li').on('click', function(){
 				 $('.date1tem').text(((weatherInfo.item.forecast[1].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 $('.date2tem').text(((weatherInfo.item.forecast[2].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
-				 
-				 
+				for (i = 0; i < 4; i++){ 
+				 if(weatherInfo.item.forecast[i].text==="Partly Cloudy"){
+				 	  skycons.set("icon"+i, Skycons.PARTLY_CLOUDY_DAY);
+				 }else if(){
+				 	
+				 }
+			    }
 	         }
 	       });
 });
