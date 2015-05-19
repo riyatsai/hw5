@@ -76,6 +76,8 @@ $('#dropdown li').on('click', function(){
 				 	  skycons.set("icon"+i,Skycons.SLEET);
 				  }	else if(weatherInfo.item.forecast[i].text==="PM Thunderstorms"||weatherInfo.item.forecast[i].text==="Heavy Thunderstorms"||weatherInfo.item.forecast[i].text==="Thunderstorms"||weatherInfo.item.forecast[i].text==="Thundershowers/Wind"||weatherInfo.item.forecast[i].text==="Showers"){
 				 	  skycons.set("icon"+i,Skycons.RAIN);
+				  }else if(weatherInfo.item.forecast[i].text==="Clear"||weatherInfo.item.forecast[i].text==="Rain"){
+				 	  skycons.set("icon"+i,Skycons.CLEAR_DAY);
 				  }
 			     }
 				 skycons.play();
