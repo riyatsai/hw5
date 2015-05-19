@@ -72,9 +72,8 @@ $('#dropdown li').on('click', function(){
 				 $('.date2tem').text(((weatherInfo.item.forecast[2].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 for (i = 0; i < 4; i++){ 
-				  if(weatherInfo.item.forecast[i].text==="Partly Cloudy"){
+				  if(weatherInfo.item.forecast[i].text==="Heavy Rain"){
 				 	  skycons.set("icon"+i,Skycons.PARTLY_CLOUDY_NIGHT);
-				
 				  }
 			     }
 				 skycons.play();
