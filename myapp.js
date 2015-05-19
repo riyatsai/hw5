@@ -37,7 +37,6 @@ $('#dropdown li').on('click', function(){
 				 console.log(weatherInfo);
 	             $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(2));
 	             $('.condition').text(weatherInfo.item.forecast[0].date);
-				 $('.date').text(weatherInfo.item.forecast.0.date);
 				 $('.date1').text(weatherInfo.item.forecast[1].date);
 				 $('.date2').text(weatherInfo.item.forecast[2].date);
 				 $('.date3').text(weatherInfo.item.forecast[3].date);
