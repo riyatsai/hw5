@@ -33,10 +33,12 @@ $('#dropdown li').on('click', function(){
 	         },
 	         success: function (data) {
 				 var weatherInfo = data.query.results.channel;
-	             var cityMatch = 'It seems ' + weatherInfo.item.condition.text.toLowerCase()+' in '+ weatherInfo.location.city + ', ' + weatherInfo.location.country
-
-			   console.log(weatherInfo);
-	           $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(2));
+	             // var cityMatch = 'It seems ' + weatherInfo.item.condition.text.toLowerCase()+' in '+ weatherInfo.location.city + ', ' + weatherInfo.location.country
+				 console.log(weatherInfo);
+	             $('.temperature').text(((weatherInfo.item.condition.temp-32)*5/9).toFixed(2));
+	             $('.condition').text(weatherInfo.item.pubDate);
+				 
+				 
 	         }
 	       });
 });
