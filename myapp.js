@@ -6,13 +6,13 @@ var skycons = new Skycons();
   // on Android, a nasty hack is needed: {"resizeClear": true}
 
   // you can add a canvas by it's ID...
-  skycons.add("icon0", Skycons.RAIN);
-  skycons.add("icon1", Skycons.CLEAR_DAY);
-  skycons.add("icon2", Skycons.CLOUDY);
-  skycons.add("icon3", Skycons.RAIN);
+  // skycons.add("icon0", Skycons.RAIN);
+  // skycons.add("icon1", Skycons.CLEAR_DAY);
+  // skycons.add("icon2", Skycons.CLOUDY);
+  // skycons.add("icon3", Skycons.RAIN);
 
   // start animation!
-  skycons.play();
+  // skycons.play();
   
   // want to change the icon? no problem:
   // skycons.set("today", Skycons.PARTLY_CLOUDY_NIGHT);
