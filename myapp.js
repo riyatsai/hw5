@@ -40,9 +40,9 @@ $('#dropdown li').on('click', function(){
 				 $('.date1').text(weatherInfo.item.forecast[1].date);
 				 $('.date2').text(weatherInfo.item.forecast[2].date);
 				 $('.date3').text(weatherInfo.item.forecast[3].date);
-				 $('.date1tem').text(((weatherInfo.item.forecast[1].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0)+'&#8451;');
-				 $('.date2tem').text(((weatherInfo.item.forecast[2].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0)+'&#8451;');
-				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0)+'&#8451;');
+				 $('.date1tem').text(((weatherInfo.item.forecast[1].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
+				 $('.date2tem').text(((weatherInfo.item.forecast[2].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
+				 $('.date3tem').text(((weatherInfo.item.forecast[3].low-32)*5/9).toFixed(0)+'-'+((weatherInfo.item.forecast[3].high-32)*5/9).toFixed(0));
 				 
 				 
 	         }
