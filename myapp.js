@@ -74,9 +74,9 @@ $('#dropdown li').on('click', function(){
 				for (i = 0; i < 4; i++){ 
 				 if(weatherInfo.item.forecast[i].text==="Partly Cloudy"){
 				 	  skycons.add("icon"+i,Skycons.PARTLY_CLOUDY_DAY);
-					  console.log("icon"+i);
+				
 				 }
-				 
+				 console.log("icon"+i);
 			    }
 	         }
 	       });
