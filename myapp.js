@@ -43,7 +43,7 @@ Get value from Bootstrap dropdown menu
 		 for (i = 0; i < 4; i++){ 
 		  if(weatherInfo.item.forecast[i].text==="Heavy Rain"||weatherInfo.item.forecast[i].text==="Rain"){
 		 	  skycons.set("icon"+i,Skycons.SLEET);
-		  }else if(weatherInfo.item.forecast[i].text==="PM Thunderstorms"||weatherInfo.item.forecast[i].text==="Heavy Thunderstorms"||weatherInfo.item.forecast[i].text==="Thunderstorms"||weatherInfo.item.forecast[i].text==="Thundershowers/Wind"||weatherInfo.item.forecast[i].text==="Showers"||weatherInfo.item.forecast[i].text==="AM Showers"){
+		  }else if(weatherInfo.item.forecast[i].text==="PM Thunderstorms"||weatherInfo.item.forecast[i].text==="Heavy Thunderstorms"||weatherInfo.item.forecast[i].text==="Thunderstorms"||weatherInfo.item.forecast[i].text==="Thundershowers/Wind"||weatherInfo.item.forecast[i].text==="Showers"||weatherInfo.item.forecast[i].text==="AM Showers"||weatherInfo.item.forecast[i].text==="Showers Late"){
 		 	  skycons.set("icon"+i,Skycons.RAIN);
 		  }else if(weatherInfo.item.forecast[i].text==="Clear"||weatherInfo.item.forecast[i].text==="Sunny"){
 		 	  skycons.set("icon"+i,Skycons.CLEAR_DAY);
